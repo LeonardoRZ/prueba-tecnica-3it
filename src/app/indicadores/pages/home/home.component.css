@@ -1,0 +1,12 @@
+.icon-width {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+ 
+  .container{
+    margin: 35px;
+  }

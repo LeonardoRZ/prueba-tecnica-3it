@@ -17,7 +17,7 @@ const routes : Routes = [
          path: 'indicador/:id', component : IndicadorComponent
       },
       {
-         path: '**', redirectTo : 'indicadores'
+        path: '**', redirectTo: ''
       }
     ]
   },

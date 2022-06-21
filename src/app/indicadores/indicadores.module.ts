@@ -7,6 +7,11 @@ import { ListIndicadoresComponent } from './pages/list-indicadores/list-indicado
 import { IndicadoresRoutingModule } from './indicadores-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 
+//Modulos
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
+
+
 
 
 @NgModule({
@@ -17,7 +22,9 @@ import { HomeComponent } from './pages/home/home.component';
   ],
   imports: [
     CommonModule,
-    IndicadoresRoutingModule
+    IndicadoresRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
 export class IndicadoresModule { }
