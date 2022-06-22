@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="card mb-5">
+        <div class="card-header text-center">
+           <label class="titulo my-2">{{titulo}}</label>
+        </div>
+        <div class="card-body mt-2">
+            <div class="row" *ngFor="let item of detalleIndicador[0]">
+                <h1 class="card-title text-center">$ {{item.Valor}}</h1>
+                <div class="col-lg-4 col-mb-4 col-sm-12 mt-2">
+                    <label class="font-weight-bold"
+                      >Nombre 
+                      </label
+                    >
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        formControlName="clientRut"
+                        class="form-control text-capitalize"
+                        readonly
+                        [value]="indicador"
+                      />
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-mb-4 col-sm-12 mt-2">
+                    <label class="font-weight-bold"
+                      >Fecha 
+                      </label
+                    >
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        formControlName="clientRut"
+                        class="form-control"
+                        readonly
+                        [value]="item.Fecha"
+                      />
+                    </div>
+                </div>
+                <div class="col-lg-4 col-mb-4 col-sm-12 mt-2">
+                    <label class="font-weight-bold"
+                      >Unidad de medida 
+                      </label
+                    >
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        formControlName="clientRut"
+                        class="form-control"
+                        readonly
+                        value="Pesos"
+                      />
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+              <app-graficas [indicador]="valueInput"></app-graficas>
+            </div>
+        </div>
+      </div>
+</div>

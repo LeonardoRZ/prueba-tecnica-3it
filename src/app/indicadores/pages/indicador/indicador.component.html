@@ -1,1 +1,24 @@
-<p>indicador works!</p>
+<div class="container">
+    <div class="card mb-5">
+        <div class="card-header text-center">
+           <label class="titulo my-2">{{titulo}}</label>
+        </div>
+        <div class="card-body" *ngIf="showTable">
+            <div class="table-responsive">
+                <table class="table table-responsive text-center">
+                    <thead>
+                        <tr>
+                          <th scope="col">FECHA</th>
+                          <th scope="col">VALOR</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let indicador of indicadores[0]">
+                          <td>{{indicador.Fecha }}</td>
+                          <td>$ {{indicador.Valor }}</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+</div>

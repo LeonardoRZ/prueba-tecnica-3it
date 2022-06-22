@@ -1,1 +1,29 @@
-<p>list-indicadores works!</p>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center">
+           <label class="titulo my-2">Indicadores</label>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-responsive text-center">
+                    <thead>
+                        <tr>
+                          <th scope="col">NOMBRE</th>
+                          <th scope="col">DETALLE</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let indicador of indicadores">
+                            <td [routerLink]="['/indicador', indicador.name]" >
+                                <span role="button">{{indicador.name}}</span>
+                            </td>
+                          <td>
+                            <mat-icon mat-list-icon color="primary" tooltip="ver detalle" [routerLink]="['/detalle', indicador.name]"  >visibility</mat-icon>
+                        </td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+</div>

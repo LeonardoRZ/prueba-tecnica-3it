@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListIndicadoresComponent } from './pages/list-indicadores/list-indicadores.component';
 import { IndicadorComponent } from './pages/indicador/indicador.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DetalleIndicadorComponent } from './pages/detalle-indicador/detalle-indicador.component';
 
 const routes : Routes = [
   {
@@ -17,7 +18,10 @@ const routes : Routes = [
          path: 'indicador/:id', component : IndicadorComponent
       },
       {
-        path: '**', redirectTo: ''
+         path: 'detalle/:id', component : DetalleIndicadorComponent
+      },
+      {
+        path: '**', redirectTo: 'indicadores'
       }
     ]
   },
